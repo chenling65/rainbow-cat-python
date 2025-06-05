@@ -1,0 +1,66 @@
+#:include pipe.kv
+FloatLayout:
+    Background:
+        id: background
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "sky1.png"
+            Rectangle:
+                size: self.width, 138
+                pos: self.pos[0], self.pos[1] + self.height - 138
+                texture: self.cloud_texture
+            Rectangle:
+                size: self.width, 96
+                pos: self.pos[0], self.pos[1]
+                texture: self.floor_texture
+
+    Label:
+        id: score
+        size_hint_y: None
+        height: 96
+        text: "0"
+        font_size: 40    
+
+    Label:
+        id: game_over_label
+        pos_hint: {'center_x': 0.5, 'center_y': 0.05}
+        text: ""
+        font_size: 30
+        color: 0, 0, 0, 1
+        opacity: 0
+
+    Button:
+        text: ""
+        font_size: 40
+        background_normal: "start.png"
+        background_down: "start.png"
+        id: start_button
+        on_release:
+            self.disabled = True
+            self.opacity = 0
+            app.start_game()
+
+    Bird:
+        source: "bird1.png"
+        size_hint: None, None
+        size: 80, 80
+        pos: 20, (root.height - 96) / 2.0
+        id: bird 
+
+    ToggleButton:
+        id: background_music
+        size_hint: None, None
+        size: 64, 64
+        pos: root.width - self.width - 10, root.height - self.height - 680
+        background_normal: "music2.png"
+        background_down: "music1.png"
+        on_state: app.toggle_background_music(self.state)
+
+
+
+
+
+
+
