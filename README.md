@@ -1,6 +1,7 @@
 # Rainbow Cat Game
 
 A Flappy Bird style game built with Python and Kivy framework. The game features a cat character that needs to navigate through pipes while avoiding collisions.
+![Screenshot 2025-06-05 190424](https://github.com/user-attachments/assets/4a09990e-2389-4574-8f27-77a5a34c54de)
 
 ## Features
 
