@@ -38,13 +38,13 @@ python main.py
 
 2. Controls:
 - Click/Tap to make the cat jump
-- Toggle button in the top-right corner to control background music
+- Toggle button in the bottom-right corner to control background music
 - Click the start button to begin the game
 
 ## Game Assets
 
 The game uses the following assets:
-- Bird/Cat sprites
+- Cat sprites
 - Pipe graphics
 - Background images
 - Sound effects and background music
